@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake with Heart - Inventory Management</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bake with Heart 🍰</h1>
+        
+        <div class="section">
+            <h2>Inventory</h2>
+            <form id="inventoryForm" action="includes/inventory.php" method="POST">
+                <input type="text" name="item_name" placeholder="Nama Barang" required>
+                <input type="number" name="quantity" placeholder="Kuantitas" required>
+                <input type="number" name="price" step="0.01" placeholder="Harga (Rp)" required>
+                <button type="submit">Tambah Barang</button>
+            </form>
+            <div id="inventoryList"></div>
+        </div>
+
+        <div class="section">
+            <h2>Penjualan</h2>
+            <form id="salesForm" action="includes/sales.php" method="POST">
+                <input type="text" name="item_name" placeholder="Nama Barang" required>
+                <input type="number" name="quantity" placeholder="Kuantitas" required>
+                <input type="number" name="sale_price" step="0.01" placeholder="Harga Jual (Rp)" required>
+                <button type="submit">Catat Penjualan</button>
+            </form>
+            <div id="salesList"></div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/debug.js"></script>
+</body>
+</html>
